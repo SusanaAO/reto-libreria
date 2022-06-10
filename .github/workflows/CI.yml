@@ -36,8 +36,8 @@ jobs:
         uses: s4u/maven-settings-action@v2.1.1
       - name: Publish packag
         env:
-          GITHUB_USERNAME: ${{ secrets.USERNAME }}
-          GITHUB_TOKEN: ${{ secrets.TOKEN }}
+          GITHUB_USERNAME: ${{ secrets.USER_NAME }}
+          GITHUB_TOKEN: ${{ secrets.TOKEN_GITHUB }}
         run: mvn source:jar deploy -DuniqueVersion=false -Dmaven.source.useDefaultManifestFile=true -Dmaven.source.includePom=true -DaltDeploymentRepository='github::default::https://maven.pkg.github.com/SusanaAO/reto-libreria'
 
         
